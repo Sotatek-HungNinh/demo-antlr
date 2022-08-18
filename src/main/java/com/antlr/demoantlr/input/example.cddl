@@ -1,0 +1,4 @@
+operational_cert =
+  {
+    hot_vkey        : uint
+  }

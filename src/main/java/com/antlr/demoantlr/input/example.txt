@@ -1,6 +1,0 @@
-operational_cert =
-  ( hot_vkey        : uint
-  , sequence_number : uint
-  , kes_period      : uint
-  , sigma           : unit
-  )

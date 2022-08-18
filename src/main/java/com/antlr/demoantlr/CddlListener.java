@@ -8,6 +8,16 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface CddlListener extends ParseTreeListener {
 	/**
+	 * Enter a parse tree produced by {@link CddlParser#entry}.
+	 * @param ctx the parse tree
+	 */
+	void enterEntry(CddlParser.EntryContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CddlParser#entry}.
+	 * @param ctx the parse tree
+	 */
+	void exitEntry(CddlParser.EntryContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CddlParser#cddl}.
 	 * @param ctx the parse tree
 	 */
@@ -17,6 +27,16 @@ public interface CddlListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitCddl(CddlParser.CddlContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CddlParser#rule_1}.
+	 * @param ctx the parse tree
+	 */
+	void enterRule_1(CddlParser.Rule_1Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link CddlParser#rule_1}.
+	 * @param ctx the parse tree
+	 */
+	void exitRule_1(CddlParser.Rule_1Context ctx);
 	/**
 	 * Enter a parse tree produced by {@link CddlParser#typename}.
 	 * @param ctx the parse tree

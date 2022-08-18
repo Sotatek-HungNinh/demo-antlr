@@ -1,7 +1,8 @@
 grammar Cddl;
-
-cddl : s ((typename (genericparm)? s assignt s type)
-                | (groupname (genericparm)? s assigng s grpent) s)+;
+entry : cddl+;
+cddl : s (rule_1 s)+;
+rule_1 : (typename (genericparm)? s assignt s type)
+      | (groupname (genericparm)? s assigng s grpent);
 
 typename : id;
 groupname : id;
@@ -19,9 +20,9 @@ type1 : type2 (s (rangeop | ctlop) s type2)?;
 
 type2 : value
       | (typename (genericarg)?)
+      | (LEFT_BRACE s group s RIGHT_BRACE)
       | (LEFT_PAREN s type s RIGHT_PAREN)
       | (LEFT_CURLY_BRACE s group s RIGHT_CURLY_BRACE)
-      | (LEFT_BRACE s group s RIGHT_BRACE)
       | (TILDE s typename (genericarg)?)
       | (AMPERSAND s LEFT_PAREN s group s RIGHT_PAREN)
       | (AMPERSAND s groupname (genericarg)?)

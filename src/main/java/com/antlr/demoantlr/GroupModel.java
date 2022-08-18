@@ -2,10 +2,13 @@ package com.antlr.demoantlr;
 
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
-public class CustomModel {
+public class GroupModel {
     private String cddl;
-    private String rule_1;
+    private List<String> rule_1 = new ArrayList<>();
     private String typename;
     private String groupname;
     private String assignt;
@@ -20,7 +23,7 @@ public class CustomModel {
     private String group;
     private String grpchoice;
     private String grpent;
-    private String memberkey;
+    private List<MemberModel> memberModels = new ArrayList<>();
     private String bareword;
     private String optcom;
     private String occur;

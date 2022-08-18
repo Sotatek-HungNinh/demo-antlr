@@ -16,6 +16,18 @@ public class CddlBaseListener implements CddlListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterEntry(CddlParser.EntryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEntry(CddlParser.EntryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterCddl(CddlParser.CddlContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -23,6 +35,18 @@ public class CddlBaseListener implements CddlListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCddl(CddlParser.CddlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterRule_1(CddlParser.Rule_1Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRule_1(CddlParser.Rule_1Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
